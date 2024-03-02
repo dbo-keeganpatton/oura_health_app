@@ -1,0 +1,3 @@
+# ignore xml files in exports
+# incase there is sensitive data I am unaware of
+exports/
