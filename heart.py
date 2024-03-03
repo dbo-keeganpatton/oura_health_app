@@ -51,5 +51,4 @@ ax.yaxis.label.set_color('white')
 
 
 plt.savefig('./plot_images/wow_bpm.png')
-# plt.savefig('/mnt/c/Users/Keegan/OneDrive/Desktop/images/health_data_figs/test.png')
 
