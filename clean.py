@@ -1,4 +1,5 @@
 import xml.etree.ElementTree as ET
+import datetime as dt
 import pandas as pd
 
 data_path = './exports/export.xml'
@@ -21,11 +22,12 @@ df['value'] = df['value'].fillna(1.0)
 df['type'] = df['type'].str.replace('HKQuantityTypeIdentifier', '')
 df['type'] = df['type'].str.replace('HKCategoryTypeIdentifier', '')
 
+
 df = df.drop(['sourceVersion'], axis=1)
+
 
 # Extract to local directory
 extract_cleaned_df = df.to_csv('data.csv', index=False)
-
 
 
 

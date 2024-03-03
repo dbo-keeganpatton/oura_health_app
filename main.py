@@ -15,8 +15,9 @@ type_column_values_to_keep = [
  'SleepAnalysis'
  ]
 
-df = df[df['type'].isin(type_column_values_to_keep)] 
 df.drop(['device'], axis=1, inplace=True)
+df = df[df['type'].isin(type_column_values_to_keep)] 
 
-
-print(df.head())
+# Split data between ring and phone
+oura_df = df[df['sourceName'] == 'Oura']
+iphone_df = df[df['sourceName'] == 'iPhone'] 
